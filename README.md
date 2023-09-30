@@ -11,7 +11,7 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-Generate a unique id from datetime convert to millisecondsSinceEpoch combine with random position and string.
+Generate a unique ID from datetime, convert it to millisecondsSinceEpoch, and combine it with a random position and a string.
 
 ## Getting started
 
