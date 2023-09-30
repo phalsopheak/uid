@@ -1,7 +1,9 @@
 name: uid
 description: Generate a unique id from datetime convert to millisecondsSinceEpoch combine with random position and string.
 version: 0.0.1
-homepage: https://github.com/phalsopheak/uid.git
+repository: https://github.com/phalsopheak/uid
+issue_tracker: https://github.com/phalsopheak/uid/issues
+
 
 environment:
   sdk: '>=3.1.0 <4.0.0'
