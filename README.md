@@ -1,25 +1,22 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+## Unique ID Generator
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+A lightweight Dart package for generating unique IDs by inserting random strings into timestamps at random positions.
+Features
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+🆔 Generate unique IDs based on current timestamp
+🎲 Insert random characters at random positions
+🔤 Support for different character sets (mixed case, uppercase only, numbers only)
+⚡ Fast and efficient ID generation
+🔢 Batch ID generation support
+🎯 Configurable random string length (2-5 characters)
 
-Generate a unique ID from datetime, convert it to millisecondsSinceEpoch, and combine it with a random position and a string.
+## Installation
 
-## Getting started
-
-Pubspec yaml:
+Add this to your package's pubspec.yaml file:
 
 ```yaml
 dependencies:
-  uid: ^0.0.1
+  uid: ^0.1.0
 ```
 
 Import the package:
@@ -30,16 +27,53 @@ import 'package:uid/uid.dart';
 
 ## Usage
 
+Basic Usage
+
 ```dart
-//Get unique id from current datetime then convert to milisecond
-//and split it at random position and add random string.
-//Ex: 4824254606141 quantityOfRandomString=2
-//random postion at 4 => 4824 + aF + 254606141
-//return 4824aF254606141
+import 'package:unique_id_generator/unique_id_generator.dart';
 
-var id = UId.getId();//4824 aF 254606141 => 4824aF254606141
+void main() {
+  // Generate a basic unique ID
+  String id = UId.getId();
+  print(id); // Example: 4824aF254606141
+}
 
-var id1 = UId.getId(4); //4824 aZ2F 254606141 => 4824aZ2F254606141
+```
+
+Advanced Usage
+
+```dart
+import 'package:unique_id_generator/unique_id_generator.dart';
+
+void main() {
+  // Generate ID with custom random string length
+  String id1 = UId.getId(quantityOfRandomString: 4);
+  print(id1); // Example: 4824aBc3254606141
+
+  // Generate ID with only uppercase letters and numbers
+  String id2 = UId.getId(isCapital: true);
+  print(id2); // Example: 4824AF254606141
+
+  // Generate ID with only numbers
+  String id3 = UId.getId(onlyNumbers: true);
+  print(id3); // Example: 482434254606141
+
+  // Combine parameters
+  String id4 = UId.getId(
+    quantityOfRandomString: 3,
+    isCapital: true,
+  );
+  print(id4); // Example: 4824A2F254606141
+
+  // Generate multiple IDs at once
+  List<String> ids = UId.getMultipleIds(
+    count: 5,
+    quantityOfRandomString: 3,
+    onlyNumbers: true,
+  );
+  print(ids); // Example: [482412354606141, 482435654606142, ...]
+}
+
 ```
 
 
