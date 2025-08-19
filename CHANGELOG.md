@@ -1,3 +1,7 @@
+## 0.1.1
+
+* Update description.
+
 ## 0.1.0
 
 * Updated to latest Flutter SDK (^3.9.0)

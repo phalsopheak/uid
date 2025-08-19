@@ -4,11 +4,15 @@ A lightweight Dart package for generating unique IDs by inserting random strings
 Features
 
 🆔 Generate unique IDs based on current timestamp
+
 🎲 Insert random characters at random positions
+
 🔤 Support for different character sets (mixed case, uppercase only, numbers only)
+
 ⚡ Fast and efficient ID generation
+
 🔢 Batch ID generation support
-🎯 Configurable random string length (2-5 characters)
+
 
 ## Installation
 
